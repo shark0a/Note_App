@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Note_Item extends StatelessWidget {
-  const Note_Item({
+class NoteItem extends StatelessWidget {
+  const NoteItem({
     super.key,
   });
 
@@ -10,7 +10,7 @@ class Note_Item extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 255, 244, 94),
+          color: const Color.fromARGB(255, 255, 244, 94),
           borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
