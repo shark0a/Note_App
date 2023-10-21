@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/widgets/custom_note.dart';
+import 'package:note_app/widgets/note_listview.dart';
 
 class NoteView extends StatelessWidget {
   const NoteView({super.key});
@@ -12,12 +13,14 @@ class NoteView extends StatelessWidget {
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
         title: const Text("Notes"),
       ),
-      body: ListView(
+      body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Note_Item(),
-          )
+          SizedBox(
+            height: 20,
+          ),
+          Expanded(
+            child: NoteListView(),
+          ),
         ],
       ),
     );
