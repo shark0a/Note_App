@@ -18,7 +18,7 @@ class NoteView extends StatelessWidget {
           showModalBottomSheet(
               context: context,
               builder: (context) {
-                return AddnoteButtonSheet();
+                return const AddnoteButtonSheet();
               });
         },
         child: const Icon(Icons.add),
