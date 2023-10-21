@@ -12,6 +12,10 @@ class NoteView extends StatelessWidget {
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
         title: const Text("Notes"),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
       body: const Column(
         children: [
           SizedBox(
