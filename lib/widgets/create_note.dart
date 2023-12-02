@@ -18,7 +18,7 @@ class NoteItem extends StatelessWidget {
           ListTile(
             title: const Text(
               'Title',
-              style: TextStyle(color: Colors.black, fontSize: 26),
+              style: TextStyle(color: Color(0xFF000000), fontSize: 26),
             ),
             subtitle: const Padding(
               padding: EdgeInsets.only(top: 16, bottom: 16),
