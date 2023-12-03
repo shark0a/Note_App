@@ -17,8 +17,7 @@ class AddnoteButtonSheet extends StatelessWidget {
           SizedBox(height: 30,),
           CustomTextFiled(hintText: 'Conetent', maxline: 5),
           SizedBox(height: 60,),
-          
-          CustomButton(),
+          CustomButton( title: 'save'),
         ],
       ),
     );
