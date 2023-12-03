@@ -11,7 +11,7 @@ class CustomTextFiled extends StatelessWidget {
        maxLines: maxline,
       decoration: InputDecoration(
       hintText:hintText,
-      hintStyle: TextStyle(color: fcolor),
+      hintStyle: const TextStyle(color: fcolor),
       enabledBorder: buildBorder(),
       focusedBorder: buildBorder(fcolor),
       
