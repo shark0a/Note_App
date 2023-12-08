@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/cubit/add_notes_cubit.dart';
@@ -24,7 +23,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
     return Form(
       key: formkey,
       autovalidateMode: autovalidateMode,
-      child: ListView(
+      child: Column(
         children: [
           const SizedBox(
             height: 16,
@@ -52,7 +51,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
               onTap: () {
                 if (formkey.currentState!.validate()) {
                   formkey.currentState!.save();
-                  var  notmodel=NoteModel(title: title!, subTitle: subtitle!, date: DateTime.now.toString(), color: Colors.blue.value);
+                  var notmodel = NoteModel(
+                      title: title!,
+                      subTitle: subtitle!,
+                      date: DateTime.now.toString(),
+                      color: Colors.blue.value);
                   BlocProvider.of<AddNoteCubits>(context).addNote(notmodel);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
