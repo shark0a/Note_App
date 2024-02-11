@@ -4,9 +4,14 @@ import 'package:note_app/cubit/fetch_notes_cubit.dart';
 import 'package:note_app/widgets/add_note_buttom_sheet.dart';
 import 'package:note_app/widgets/note_listview.dart';
 
-class NoteView extends StatelessWidget {
+class NoteView extends StatefulWidget {
   const NoteView({super.key});
 
+  @override
+  State<NoteView> createState() => _NoteViewState();
+}
+
+class _NoteViewState extends State<NoteView> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
