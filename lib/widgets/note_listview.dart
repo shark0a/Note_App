@@ -18,6 +18,7 @@ class _NoteListViewState extends State<NoteListView> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<NotesCubit, NotesState>(
       builder: (context, state) {
@@ -29,7 +30,7 @@ class _NoteListViewState extends State<NoteListView> {
             padding: EdgeInsets.zero,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: NoteItem(
                   notes: notes[index],
                 ),

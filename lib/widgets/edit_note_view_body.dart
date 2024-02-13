@@ -34,7 +34,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
           child: ListView(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               CustomTextFiled(
@@ -44,13 +44,13 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                   hintText: widget.note.title,
                   controller: TextEditingController(text: widget.note.title),
                   maxline: 1),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               EditNoteColorsList(
                 note: widget.note,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               CustomTextFiled(
@@ -61,7 +61,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                   hintText: widget.note.subTitle,
                   controller: TextEditingController(text: widget.note.subTitle),
                   maxline: 5),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               CustomButton(
