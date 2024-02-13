@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:note_app/cubit/fetch_notes_cubit.dart';
+import 'package:note_app/models/note_models.dart';
 import 'package:note_app/widgets/custom_button_sheet.dart';
 import 'package:note_app/widgets/custom_text_filed.dart';
 
@@ -12,6 +15,10 @@ class EditNoteViewBody extends StatefulWidget {
 class _EditNoteViewBodyState extends State<EditNoteViewBody> {
   @override
   @override
+  void initState() {
+   final NoteModel notes= BlocProvider.of<NotesCubit>(context).notes!;
+    super.initState();
+  }
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(

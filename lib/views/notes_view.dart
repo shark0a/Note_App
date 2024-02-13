@@ -14,36 +14,31 @@ class NoteView extends StatefulWidget {
 class _NoteViewState extends State<NoteView> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
-          ],
-          title: const Text("Notes"),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showModalBottomSheet(
-                isScrollControlled: true,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16)),
-                context: context,
-                builder: (context) {
-                  return const AddnoteButtonSheet();
-                });
-          },
-          child: const Icon(Icons.add),
-        ),
-        body: const Column(
-          children: [
-            Expanded(
-              child: NoteListView(),
-            ),
-          ],
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+        title: const Text("Notes"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+              isScrollControlled: true,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16)),
+              context: context,
+              builder: (context) {
+                return const AddnoteButtonSheet();
+              });
+        },
+        child: const Icon(Icons.add),
+      ),
+      body: const Column(
+        children: [
+          Expanded(
+            child: NoteListView(),
+          ),
+        ],
       ),
     );
   }
