@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/cubit/fetch_notes_cubit.dart';
 import 'package:note_app/widgets/add_note_buttom_sheet.dart';
 import 'package:note_app/widgets/note_listview.dart';
 
@@ -16,9 +14,16 @@ class _NoteViewState extends State<NoteView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
-        title: const Text("Notes"),
+        toolbarHeight: 20,
+        bottom: AppBar(
+          shadowColor: Colors.white,
+          elevation: 15,
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
+          ],
+          title: const Text("Notes"),
+          backgroundColor: ThemeData.light().primaryColor,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

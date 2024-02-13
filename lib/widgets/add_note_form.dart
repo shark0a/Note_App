@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:note_app/cubit/add_notes_cubit.dart';
 import 'package:note_app/models/note_models.dart';
+import 'package:note_app/widgets/color_list_view.dart';
 import 'package:note_app/widgets/custom_button_sheet.dart';
 import 'package:note_app/widgets/custom_text_filed.dart';
 
@@ -30,7 +31,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             height: 16,
           ),
           CustomTextFiled(
-            onSaved: (value) {
+            onchange: (value) {
               title = value;
             },
             hintText: 'title',
@@ -40,13 +41,17 @@ class _AddNoteFormState extends State<AddNoteForm> {
             height: 30,
           ),
           CustomTextFiled(
-              onSaved: (value) {
+              onchange: (value) {
                 subtitle = value;
               },
               hintText: 'Conetent',
               maxline: 5),
           const SizedBox(
-            height: 60,
+            height: 32,
+          ),
+          const ColorsListView(),
+          const SizedBox(
+            height: 32,
           ),
           CustomButton(
               onTap: () {

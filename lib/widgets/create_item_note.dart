@@ -15,7 +15,9 @@ class NoteItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const EditNoteView();
+          return EditNoteView(
+            note: notes,
+          );
         }));
       },
       child: Container(
@@ -28,13 +30,19 @@ class NoteItem extends StatelessWidget {
             ListTile(
               title: Text(
                 notes.title,
-                style: TextStyle(color: Color(0xFF000000), fontSize: 26),
+                style: TextStyle(
+                    color: Color(0xFF000000),
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold),
               ),
               subtitle: Padding(
                 padding: EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
                   notes.subTitle,
-                  style: TextStyle(color: Colors.black54, fontSize: 18),
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800),
                 ),
               ),
               trailing: IconButton(
