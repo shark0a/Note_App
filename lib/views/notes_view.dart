@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/widgets/add_note_buttom_sheet.dart';
 import 'package:note_app/widgets/note_listview.dart';
+import 'package:note_app/views/about_developer.dart';
 
 class NoteView extends StatefulWidget {
   const NoteView({super.key});
@@ -19,7 +20,15 @@ class _NoteViewState extends State<NoteView> {
           shadowColor: Colors.white,
           elevation: 15,
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AboutDeveloper(),
+                      ));
+                },
+                icon: const Icon(Icons.info))
           ],
           title: const Text("Notes"),
           backgroundColor: ThemeData.light().primaryColor,

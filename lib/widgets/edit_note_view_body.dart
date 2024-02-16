@@ -29,6 +29,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                 icon: const Icon(Icons.done))
           ],
           title: const Text("Edit Note View"),
+          backgroundColor: ThemeData.light().primaryColor,
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
@@ -54,7 +55,6 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                 height: 32,
               ),
               CustomTextFiled(
-                
                   onchange: (value) {
                     widget.note.subTitle = value ?? widget.note.subTitle;
                   },
