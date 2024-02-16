@@ -25,7 +25,7 @@ class _NoteViewState extends State<NoteView> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => AboutDeveloper(),
+                        builder: (context) => const AboutDeveloper(),
                       ));
                 },
                 icon: const Icon(Icons.info))
